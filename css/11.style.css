@@ -1,0 +1,19 @@
+.title-container {
+  position: relative;
+}
+
+.personal-info__title {
+  /* position: static; */
+
+  /* position: relative;
+    top: 100px;
+    left: 30px; */
+
+  /* position: fixed; */
+
+  /* position: sticky;
+    top: 150px; */
+
+  position: absolute;
+  top: 50px;
+}
