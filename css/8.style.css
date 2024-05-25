@@ -1,0 +1,11 @@
+.hero {
+  font-size: 30px;
+  > h6 {
+    /* font-size: 2em; */
+    font-size: 2rem;
+  }
+  & p {
+    height: 10em;
+    width: 10em;
+  }
+}

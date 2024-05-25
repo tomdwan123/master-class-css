@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  background-color: lightcoral;
+}
+
+.main-title {
+  border: 5px solid black;
+  border: dotted 10px green;
+  border: maroon dashed 2px;
+}

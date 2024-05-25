@@ -1,0 +1,23 @@
+.experience {
+  > i:first-child {
+    color: blue;
+  }
+  & li:first-of-type {
+    color: lightslategrey;
+  }
+  & li:last-child {
+    color: tomato;
+  }
+  & i:last-of-type {
+    color: lightsalmon;
+  }
+  & li:nth-child(4) {
+    text-decoration: underline 2px solid;
+  }
+  & li:nth-of-type(3) {
+    text-decoration: underline 2px solid grey;
+  }
+  & i:nth-of-type(2):hover {
+    color: red;
+  }
+}

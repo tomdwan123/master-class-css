@@ -1,0 +1,15 @@
+h3 {
+  color: coral;
+  text-align: center;
+}
+
+h1 {
+  text-transform: lowercase;
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: dashed;
+  text-decoration-color: red;
+}
