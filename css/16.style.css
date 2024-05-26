@@ -1,0 +1,19 @@
+/* Specificity */
+/*
+Inline                                      -> 1000
+ID                                          -> 100
+class/pseudo-classes/attribute selectors    -> 10
+Element/pseudo-elements                     -> 1
+*/
+
+h1 {
+  color: blue;
+}
+
+.main-title {
+  color: red;
+}
+
+#big-title {
+  color: brown;
+}
