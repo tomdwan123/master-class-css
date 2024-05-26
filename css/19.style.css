@@ -1,0 +1,17 @@
+.nav {
+  > a {
+    text-decoration: none;
+    color: white;
+    background-color: grey;
+    padding: 0.8rem 1.6rem;
+    font-size: 17px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease-in;
+    &:hover {
+      color: grey;
+      background-color: white;
+      border: 1px solid grey;
+    }
+  }
+}
