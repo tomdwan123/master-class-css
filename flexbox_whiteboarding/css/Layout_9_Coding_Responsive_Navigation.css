@@ -55,3 +55,10 @@ header {
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  nav {
+    flex-basis: 100%;
+    order: 1;
+  }
+}
