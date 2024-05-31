@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+  width: 100vw;
+  & .card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  & .card:first-child {
+    background-image: url("../images/2.1.jpg");
+  }
+  & .card:nth-child(2) {
+    background-image: url("../images/2.2.jpg");
+  }
+  & .card:nth-child(3) {
+    background-image: url("../images/2.3.jpg");
+  }
+  & .card:last-child {
+    background-image: url("../images/2.4.jpg");
+  }
+}
