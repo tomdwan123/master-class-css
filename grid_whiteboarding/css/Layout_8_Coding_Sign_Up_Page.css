@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 15rem);
+  grid-template-areas:
+    "logo logo logo mini-title mini-title mini-title"
+    "desc desc desc title title title"
+    "img img img email email email"
+    "img img img password password password"
+    "img img img submit submit submit"
+    "img img img google google google"
+    "img img img sign-in sign-in sign-in";
+
+  padding: 4rem;
+  place-content: center;
+  align-items: center;
+  gap: 2rem 3rem;
+
+  & .logo {
+    grid-area: logo;
+    justify-self: center;
+
+    & img {
+      height: 3rem;
+    }
+  }
+
+  & .desc {
+    grid-area: desc;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  & .sign-up-img {
+    grid-area: img;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .mini-title {
+    grid-area: mini-title;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  & .title {
+    grid-area: title;
+    font-size: 3rem;
+  }
+
+  & .email-fieldset,
+  .password-fieldset {
+    grid-area: email;
+    border: none;
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+
+  & input[type="email"],
+  input[type="password"],
+  input[type="submit"] {
+    border: 1px solid lightgrey;
+    border-radius: 1rem;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.6rem;
+    outline: none;
+    background: none;
+  }
+
+  & .password-fieldset {
+    grid-area: password;
+  }
+
+  & input[type="submit"] {
+    grid-area: submit;
+    background-color: #242f9b;
+    color: white;
+    cursor: pointer;
+  }
+
+  & .google-sign-up {
+    grid-area: google;
+    border-radius: 1rem;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    background-color: #dbdffd;
+    color: #242f9b;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  & .sign-in {
+    grid-area: sign-in;
+    font-size: 1.5rem;
+    text-align: center;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+}
