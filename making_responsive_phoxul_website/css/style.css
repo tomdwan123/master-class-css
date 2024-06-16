@@ -236,6 +236,7 @@ li {
 
     .hero__content--links {
       display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
 
       & .hero__content--links__my-works,
@@ -245,7 +246,7 @@ li {
         text-align: center;
         transition: all 0.25s ease-in-out;
         border-radius: 5rem;
-        flex-basis: 30%;
+        flex-basis: 15rem;
       }
 
       .hero__content--links__my-works {
@@ -539,11 +540,12 @@ li {
 
   .my-works__areas {
     display: flex;
-    cursor: pointer;
-    transition: 0.25s ease;
+    flex-wrap: wrap;
     gap: 2rem;
 
     & .my-works__areas--area {
+      cursor: pointer;
+      transition: 0.25s ease;
       font-size: var(--font-size-st-sc);
 
       &:first-child {
@@ -558,7 +560,7 @@ li {
 
   .my_works--imgs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-template-rows: repeat(4, min-content);
     gap: 2rem;
 
@@ -662,7 +664,7 @@ li {
   }
 
   .contact__additional {
-    flex-basis: 40%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -887,6 +889,13 @@ li {
 }
 
 /* *********************************************************************************** Media Queries */
+@media screen and (max-width: 1300px) {
+  .my_works--imgs__img {
+    grid-column: auto / auto !important;
+    grid-row: auto / auto !important;
+  }
+}
+
 @media screen and (max-width: 900px) {
   /* --------------------------------------- Section Padding */
   .section__padding {
@@ -961,5 +970,120 @@ li {
         transform: rotate(-45deg) translateX(-0.2rem) translateY(-2.1rem);
       }
     }
+  }
+
+  /* --------------------------------------- Hero */
+  .hero__content {
+    flex-basis: auto !important;
+  }
+
+  .hero__img {
+    width: 100% !important;
+  }
+
+  /* --------------------------------------- Personal Info */
+  .personal-info {
+    flex-wrap: wrap;
+  }
+
+  .personal-info__content,
+  .personal-info__img {
+    flex-basis: 100% !important;
+  }
+
+  .personal-info__img img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .personal-info__img::before {
+    left: -10% !important;
+  }
+
+  /* --------------------------------------- Section Title */
+  .section__title {
+    font-size: var(--font-size-st-mc);
+  }
+
+  /* --------------------------------------- Services */
+  .service__cards--card {
+    border: none !important;
+  }
+
+  /* --------------------------------------- News */
+  .news__article--content {
+    grid-column: 1 / -1 !important;
+    background-color: var(--color-secondary-m-2) !important;
+  }
+
+  .news__article--content--mini-title,
+  news__article--content__info--links::after {
+    color: var(--color-secondary) !important;
+    background-color: var(--color-primary) !important;
+  }
+
+  .news__article--content--title,
+  .news__article--content__info--links {
+    color: var(--color-primary) !important;
+  }
+
+  .news__article--img {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* --------------------------------------- Contact */
+  .contact {
+    flex-wrap: wrap;
+  }
+
+  .contact__info,
+  .contact__additional {
+    flex-basis: 100% !important;
+  }
+
+  .contact__additional {
+    background-color: var(--color-secondary-m-2) !important;
+  }
+
+  .contact__additional--personal__name {
+    color: var(--color-primary);
+  }
+
+  /* --------------------------------------- Footer */
+  .footer__newsletter {
+    flex-wrap: wrap;
+    gap: 2rem 0;
+  }
+
+  .footer__newsletter--content,
+  .footer__newsletter--form {
+    flex-basis: 100% !important;
+  }
+
+  .footer__authors {
+    flex-wrap: wrap;
+    align-items: flex-start !important;
+    justify-content: space-between;
+  }
+
+  .footer__authors--info,
+  .footer__authors--quick-links {
+    border: none !important;
+  }
+
+  .footer__authors--info,
+  .footer__authors--quick-links,
+  .footer__authors--contact {
+    flex-basis: auto !important;
+  }
+
+  .footer__copy-rights {
+    flex-wrap: wrap;
+  }
+}
+
+@media sreen and (max-width: 500px) {
+  .section__padding {
+    padding: var(--padding-st-l-v) var(--padding-st-l-h) !important;
   }
 }
