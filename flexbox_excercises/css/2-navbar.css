@@ -1,0 +1,123 @@
+.header {
+  background-color: #0d4eb0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  color: white;
+  padding: 4rem;
+}
+
+.header__meta,
+.header__categories,
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__meta,
+.header__categories {
+  border-bottom: 1px solid rgba(255 255 255 / 0.35);
+  padding-bottom: 2rem;
+}
+
+select,
+input[type="submit"] {
+  color: white;
+  border: none;
+  background-color: #1363df;
+  padding: 0.7rem 2rem;
+}
+
+a {
+  color: white;
+  font-weight: 700;
+  padding: 0;
+}
+
+.header__meta--form,
+.header__meta--form fieldset,
+.header__meta--links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.header__categories > div {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.header__categories > div:first-child {
+  flex-grow: 1;
+}
+
+.header__categories--form {
+  flex-grow: 1;
+}
+
+.header__categories--form input[type="search"] {
+  background-color: white;
+  width: 35%;
+  padding: 0.7rem 2rem;
+}
+
+.header__categories--favourites a,
+.header__categories--login a {
+  font-size: 1.2rem;
+}
+
+.header__categories--favourites,
+.header__categories--login {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header__categories--favourites > div:first-child,
+.header__categories--login > div:first-child {
+  position: relative;
+}
+
+.header__categories--favourites > div:first-child i,
+.header__categories--login > div:first-child i {
+  font-size: 2.5rem;
+}
+
+.header__categories--favourites > div:first-child span,
+.header__categories--login > div:first-child span {
+  position: absolute;
+  font-size: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  color: #0d4eb0;
+  padding: 0 0.5rem;
+  top: -1rem;
+  right: -0.5rem;
+}
+
+.header__categories--favourites > div:last-child,
+.header__categories--login > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav--links {
+  display: flex;
+  gap: 3rem;
+}
+
+.header__nav--help {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header__nav--help i {
+  font-size: 2.5rem;
+}
